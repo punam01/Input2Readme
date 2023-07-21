@@ -1,146 +1,86 @@
-import React from 'react'
+
+import Title from "./Title";
+import Subtitle from "./Subtitle";
+import CheckBox from "./CheckBox";
 
 const UserForm = (props) => {
-    return (
-        <>
-        <form>
-            <div className="form-group">
-                <label htmlFor="title " className="form-label">Title</label>
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="title " name="title " value="Hi 👋, I'm " onChange={props.handleChange}/>
-                    <input type="text" className="form-control" id="title " name="title " value="" onChange={props.handleChange} placeholder='name'/>
-                </div>                
-            </div>
-            <div className="form-group">
-                <label htmlFor="subtitle " className="form-label">Sub-Title</label>
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="subtitle " name="subtitle " value="" onChange={props.handleChange}/>
-                </div>                
-            </div>
-            <div className="form-group">
-                <label htmlFor="work" className="form-label">Work</label>
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="work" name="work" value="🔭 I’m currently working on" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="work" name="work" value="" onChange={props.handleChange} placeholder='project name'/>
-                    <input type="text" className="form-control" id="work" name="work" value="" onChange={props.handleChange} placeholder='project link'/>
-                </div>             
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="collaborate" name="collaborate" value="👯 I’m looking to collaborate on" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="collaborate" name="collaborate" value="" onChange={props.handleChange} placeholder='project name'/>
-                    <input type="text" className="form-control" id="collaborate" name="collaborate" value="" onChange={props.handleChange} placeholder='project link'/>
-                </div>  
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="help" name="help" value="🤝 I’m looking for help with" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="help" name="help" value="" onChange={props.handleChange} placeholder='project name'/>
-                    <input type="text" className="form-control" id="help" name="help" value="" onChange={props.handleChange} placeholder='project link'/>
-                </div>  
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="learning" name="learning" value="🌱 I’m currently learning" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="learning" name="learning" value="" onChange={props.handleChange} placeholder='Framework, courses etc'/>
-                </div>  
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="reachme" name="reachme" value="📫 How to reach me" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="reachme" name="reachme" value="" onChange={props.handleChange} placeholder='example@gmail.com'/>
-                </div>     
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="project" name="project" value="👨‍💻 All of my projects are available at" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="project" name="project" value="" onChange={props.handleChange} placeholder='portfolio link'/>
-                </div> 
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="article" name="article" value="📝 I regularly write articles on" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="article" name="article" value="" onChange={props.handleChange} placeholder='blog link'/>
-                </div> 
-                <div className="form-input-group">
-                    <input type="text" className="form-control" id="experience" name="experience" value="📄 Know about my experiences" onChange={props.handleChange} readOnly/>
-                    <input type="text" className="form-control" id="experience" name="experience" value="" onChange={props.handleChange} placeholder='resume link'/>
-                </div> 
-            </div>
-            <div className="form-group">
-                <label htmlFor="skills" className="form-label">Skills</label>
-                <div className="form-input-group">
-                    <section className='skills-section'>
-                        <div className='skill-section'>
-                            <label htmlFor="programming" className="form-sub-label">Programming Language</label>
-                            <div className='check-outer'>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C++" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
-                                </div>                              
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C#" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Go" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="Go"/>
-                                </div> 
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Java" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Javascript" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="Javascript"/>
-                                </div> 
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div> 
-                            </div>
-                        </div>   
-                        <div className='skill-section'>
-                            <label htmlFor="programming" className="form-sub-label">Programming Language</label>
-                            <div className='check-outer'>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C++" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++"/>
-                                </div>                              
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C#" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Go" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="Go"/>
-                                </div> 
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Java" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="Javascript" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="Javascript"/>
-                                </div> 
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div>
-                                <div className='checkbox-inner'>
-                                    <input type="checkbox" className="form-control" id="programming" name="programming" value="C" onChange={props.handleChange}/>
-                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C"/>
-                                </div> 
-                            </div>
-                        </div>
-                    </section>
-                    
-                    
-                </div>                
-            </div>
-        </form>
-        </>
-    );
-}
+  const onSubmit = (e) => {};
+  return (
+    <>
+      <form>
+        {/*NAME*/}
+        <Title />
+        {/*SUB TITLE*/}
+        <Subtitle
+          heading="Sub-Title"
+          title="EX. Empower Your Voice, Share Your Stories."
+        />
+        {/*DESCRIPTION*/}
+        <Subtitle
+          heading="Description"
+          title="EX. A short description of your project."
+        />
+        {/*TABLE OF CONTENT*/}
+        <div className="form-group">
+          <label htmlFor="table_of_content " className="form-label">
+            Table of Content
+          </label>
+          {/*INSTALLATION-SECTION*/}
+          <CheckBox
+            heading="Installation 🔽"
+            variable="installation"
+            subhead="Prerequisites"
+            placeholder="EX. Node.js, npm, MongoDB, etc."
+          />
+          {/*USAGE-SECTION*/}
+          <CheckBox
+            heading="Usage 📋"
+            variable="usage"
+            subhead="How to use the project?"
+            placeholder="EX. Information on how to use my project, including examples."
+          />
+          {/*FEATURES-SECTION*/}
+          <CheckBox
+            heading="Features 🚀"
+            variable="features"
+            subhead="Have a look at the features"
+            placeholder="EX. Description of feature 1,feature 2, and more"
+          />
+          {/*TECH-SECTION*/}
+          <CheckBox
+            heading="Technologies Used 💻"
+            variable="techUsed"
+            subhead="Mention the technologies, languages, frameworks, and libraries used in the project."
+            placeholder="EX. Technology, Library, Framework"
+          />
+          {/*GETTING STARTED-SECTION*/}
+          <CheckBox
+            heading="Getting Started 🎬"
+            variable="gettingStarted"
+            subhead="Detailed instructions on how users can get started with my project, including any configuration or setup required."
+            placeholder="EX. Creating an Account"
+          />
+          {/*CONTRIBUTE-SECTION*/}
+          <CheckBox
+            heading="Contributing 💡"
+            variable="contribute"
+            subhead="Guidelines on how users or developers can contribute to your project."
+            placeholder="EX. Creating an Account"
+          />
+          {/*LICENSE-SECTION*/}
+          <CheckBox
+            heading="License 📝"
+            variable="license"
+            subhead="Information about the license under which your project is released."
+            placeholder="EX. MIT License, Apache License 2.0, GNU General Public License (GPL), and more."
+          />
+          <button type="submit" className="btn btn-primary" onClick={onSubmit}>
+            Submit
+          </button>
+        </div>
+      </form>
+    </>
+  );
+};
 
 export default UserForm;

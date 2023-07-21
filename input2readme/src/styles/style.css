@@ -86,7 +86,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 3rem;
 }
 .form-group{
     display: flex;
@@ -95,13 +95,13 @@ form{
     align-items: flex-start;
     width:100%;
     height: 100%;
-    margin-bottom: 3rem;
 }
 .form-label{
     font-size: 1.8rem;
     font-weight: 600;
     padding: 0.5rem;
 }
+
 .form-input-group{
     display: flex;
     flex-direction: row;
@@ -110,10 +110,12 @@ form{
     width:100%;
     height: 100%;
     margin-bottom: 1.5rem;
+    padding: 1rem;
 }
 .form-sub-label,
-input[type=text]{
-    width: 25%;
+.form-text-input{
+    width: 30%;
+    max-width: 100%;
     padding: 0.8rem;
     margin-right: 3rem;
     font-size: 0.9rem;
@@ -128,11 +130,19 @@ input[type=text]:focus{
     outline: none;
     border-bottom: 0.2px solid blue;
 }
+.form-label.check{
+    font-size: 0.9rem;
+    font-family: 'Victor Mono', monospace;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding:1rem;
+}
 .form-sub-label{
     width:90%;
     color: var(--blackbg);
     font-size: 1rem;
-}.skills-section {
+}
+.skills-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -152,35 +162,176 @@ input[type=text]:focus{
 }
 
 .check-outer {
-width: 90%;
+    width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
 .checkbox-inner {
-  width: 23%;
+  width: 18%;
   height: 5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-input[type=checkbox] {
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
-  object-fit: cover;
-  border-color: var(--blackbg);
+  padding: 1rem;
 }
 img {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   padding: 1rem;
 }
 
+.form-control.subtitle{
+    width: 100%;
+}
+.check-group{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.check-group .left{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.check-group .right{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.check-group .right .install-guide{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.check-group .right .install-guide .install-guide .form-checkbox{
+    width:100%;
+}
+.form-checkbox-input{
+  width: 90%;
+  padding: 1rem;
+  border:none;
+  border-bottom: 0.2px solid var(--graybg);
+  cursor: pointer;
+  font-family: 'Victor Mono', monospace;
+font-weight: 600;
+}
+.btn{
+    width:fit-content;
+    height: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: var(--blackbg);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Victor Mono', monospace;
+    transition: all 0.3s ease-in-out;
+    margin-left:45%;
+}
 /*FORM END*/
+/*COFFEE*/
+.coffee-holder{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    border-radius: 100%;
+    background-color: #E0FB4A;
+    margin-bottom: 0;
+    margin-right: 0;
+    position: fixed;
+    z-index: 100;
+}
+.coffee-icon{
+    color: var(--blackbg);
+    font-size: 3rem;
+    cursor: pointer;
+    font-weight: lighter;
+    padding: 2px;
+}
+/*COFFEE END*/
+/*make responsive*/
+@media screen and (max-width: 900px){
+    .nav-links{
+        display: none;
+    }
+    .logo{
+        margin-left: 1rem;
+    }
+    .icon{
+        margin-right: 1rem;
+    }
+    .form-input-group{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .form-sub-label,
+    .form-text-input{
+        width: 100%;
+        margin-right: 0;
+    }
+    .form-label.check{
+        font-size: 1rem;
+    }
+    .check-outer{
+        width: 100%;
+    }
+    .checkbox-inner{
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .check-group{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .check-group .left{
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .check-group .right{
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .check-group .right .install-guide{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .check-group .right .install-guide .install-guide .form-checkbox{
+        width:100%;
+    }
+    .form-checkbox-input{
+        width: 100%;
+    }
+    .btn{
+        margin-left: 0;
+    }
+}
