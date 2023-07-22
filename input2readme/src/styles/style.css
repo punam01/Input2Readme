@@ -198,6 +198,7 @@ img {
     align-items: flex-start;
     padding: 1rem;
 }
+
 .check-group .left{
     width: 20%;
     height: 100%;
@@ -209,6 +210,7 @@ img {
     width: 80%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
@@ -230,22 +232,50 @@ img {
   cursor: pointer;
   font-family: 'Victor Mono', monospace;
 font-weight: 600;
+display: none;
+
 }
+.addbtn,
 .btn{
     width:fit-content;
     height: 100%;
     padding: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: none;
-    background-color: var(--blackbg);
-    color: white;
+    border:1px solid  var(--blackbg);
+    color: var(--blackbg);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     font-family: 'Victor Mono', monospace;
     transition: all 0.3s ease-in-out;
-    margin-left:45%;
 }
+/*margin wave animation*/
+.btn:hover{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.btn:focus{
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.removeBtn{
+    width:fit-content;
+    height: 100%;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border: none;
+    border:1px solid  var(--blackbg);
+    color: var(--blackbg);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Victor Mono', monospace;
+    transition: all 0.3s ease-in-out;
+}
+
 /*FORM END*/
 /*COFFEE*/
 .coffee-holder{
