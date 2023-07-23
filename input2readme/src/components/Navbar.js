@@ -63,6 +63,9 @@ const Navbar = () => {
                 Input2Readme
             </p>
             <ul className="nav-links">
+                <p align="center"> 
+                    <img src="https://komarev.com/ghpvc/?username=punam01&label=Profile%20views&color=0e75b6&style=flat" alt="punam01" className='prof'/> 
+                </p>
                 <li onClick={handleBlogClick}>
                     <AiOutlineRead className="icon"/>
                     <p>Read Blog</p>

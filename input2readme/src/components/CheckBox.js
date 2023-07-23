@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 
 const CheckBox = (props) => {
     const [checked, setChecked] = useState(false);
@@ -8,8 +8,9 @@ const CheckBox = (props) => {
         setChecked(!checked);
     }
     const handleGuide = (e) => {
+        console.log(e);
         setGuide(e.target.value);
-        console.log(guide);
+        console.log("value"+e.target.value+"     "+guide);
     }
     const handleAdd = (e) => {
         e.preventDefault();
@@ -21,7 +22,7 @@ const CheckBox = (props) => {
         input.className='form-checkbox-input';
         input.id='guide';
         input.name='guide';
-        input.onClick=handleGuide;
+        input.setAttribute("onchange", handleGuide);
         input.placeholder=props.placeholder;
         input.value=guide;
         input.style.display='flex';

@@ -39,6 +39,7 @@ nav{
     margin-right: 4rem;
     padding-left:1rem ;
 }
+
 .nav-links li{
     list-style: none;
     display: flex;
@@ -47,6 +48,10 @@ nav{
     align-items: center;
     padding-left:1rem;
     border: 1px solid black;
+    cursor: pointer;
+}
+img{
+    padding: 1rem;
 }
 .icon{
     color: var(--blackbg);
@@ -180,11 +185,7 @@ input[type=text]:focus{
   align-items: center;
   padding: 1rem;
 }
-img {
-  width: 2rem;
-  height: 2rem;
-  padding: 1rem;
-}
+
 
 .form-control.subtitle{
     width: 100%;
@@ -232,7 +233,7 @@ img {
   cursor: pointer;
   font-family: 'Victor Mono', monospace;
 font-weight: 600;
-display: none;
+display: flex;
 
 }
 .addbtn,
