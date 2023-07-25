@@ -17,7 +17,7 @@ const Title = (props) => {
                 <input type="text" className="form-text-input" id="name" name="name" placeholder='EX. Awesome Blogging Platform' onChange={handleNameChange}/>
             </div>                
         </div>
-
+        
     )
 }
 export default Title;
