@@ -1,10 +1,12 @@
 import React from 'react'
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import { AiOutlineStar,AiOutlineFork,AiOutlineRead } from 'react-icons/ai';
 const Navbar = () => {
     const accessToken = "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";
     const owner = "punam01"; // Replace with the repository owner's username
     const repo = "Input2Readme"; // Replace with the repository name
+    const navigate = useNavigate();
     const handleForkClick = async () => {
         try {
         const response = await axios.post(
@@ -56,10 +58,13 @@ const Navbar = () => {
     const handleBlogClick = () => {
         window.location.href = "https://medium.com/@punamkumavat01";
     }
+    const handleClick = () => {
+        navigate('/');
+    };
     return (    
         <>
         <nav>
-            <p className="logo">
+            <p className="logo" onClick={handleClick}>
                 Input2Readme
             </p>
             <ul className="nav-links">

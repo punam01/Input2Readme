@@ -251,7 +251,6 @@ display: flex;
     font-family: 'Victor Mono', monospace;
     transition: all 0.3s ease-in-out;
 }
-/*margin wave animation*/
 .btn:hover{
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -278,6 +277,38 @@ display: flex;
 }
 
 /*FORM END*/
+/*MARKDOWN*/
+.markdown-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    height: 90%;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+.markdown-view{
+    width: 90%;
+    height: 90%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid var(--graybg);
+    background-color: rgba(0, 0, 0,0.1);
+    box-shadow: 0px 0px 2px 0px 10px rgba(0, 0, 0,0.5);
+}
+
+/*MARKDOWN END*/
 /*COFFEE*/
 .coffee-holder{
     width: 2rem;
@@ -364,5 +395,11 @@ display: flex;
     }
     .btn{
         margin-left: 0;
+    }
+    .options{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
     }
 }

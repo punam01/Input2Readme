@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const UserForm = () => {
   const [projectName, setProjectName] = useState("");
@@ -34,7 +35,6 @@ const UserForm = () => {
       guide: "",
     },
   });
-
   // Handle input changes for projectName, subTitle, and description
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -71,6 +71,7 @@ const UserForm = () => {
     }));
   };
 
+  const navigate=useNavigate();
   const onSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -80,7 +81,11 @@ const UserForm = () => {
       ...checkboxData,
     };
     console.log(data);
-    // Add any further logic for form submission here
+    //Passing data to markdown.js
+    navigate("/markdown", { state: data });
+    //add data to local storage
+    localStorage.setItem("data", JSON.stringify(data));
+    
   };
   return (
     <>
@@ -97,7 +102,6 @@ const UserForm = () => {
               name="title"
               defaultValue="Welcome to 🙋"
               readOnly
-          
             />
             <input
               type="text"
@@ -106,6 +110,7 @@ const UserForm = () => {
               name="title"
               placeholder="EX. Awesome Blogging Platform"
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
@@ -121,6 +126,7 @@ const UserForm = () => {
               name="subtitle"
               placeholder="EX. Empower Your Voice, Share Your Stories."
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
@@ -136,6 +142,7 @@ const UserForm = () => {
               name="description"
               placeholder="EX. A short description of your project."
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
