@@ -1,151 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:wght@200;300;400;500;600;700;800&family=Victor+Mono:wght@100;200;300;400;500;600;700&display=swap');
-:root{
-    --yellowbg: #E0FB4A;
-    --blackbg:#010101;
-    --whitebg:#fff;
-    --graybg:#5a5a5a;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:wght@200;300;400;500;600;700;800&family=Victor+Mono:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --yellowbg: #e0fb4a;
+  --blackbg: #010101;
+  --whitebg: #fff;
+  --graybg: #5a5a5a;
 }
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; 
-    font-family: 'Lato', sans-serif;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 /*NAVBAR START*/
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--blackbg);
-    margin-top: 0;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0,0.1);
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blackbg);
+  margin-top: 0;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
 }
-.logo{
-    height:5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 4rem;
-    font-family: 'Mulish', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
+.logo {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
-.nav-links{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height:90%;
-    margin-right: 4rem;
-    padding-left:1rem ;
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 90%;
+  margin-right: 4rem;
+  padding-left: 1rem;
 }
 
-.nav-links li{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-left:1rem;
-    border: 1px solid black;
-    cursor: pointer;
+.nav-links li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
 }
-img{
-    padding: 1rem;
+img {
+  padding: 1rem;
 }
-.icon{
-    color: var(--blackbg);
-    font-size: 1.3rem;
-    cursor: pointer;
-    font-weight: lighter;
-    padding: 2px;
-    animation: pendulum 1s infinite;
+.icon {
+  color: var(--blackbg);
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: lighter;
+  padding: 2px;
+  animation: pendulum 1s infinite;
 }
-li p{
-    font-size: 0.7rem;
-    font-weight: 300;
-    margin-right: 1rem;
+li p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-right: 1rem;
 }
 @keyframes pendulum {
-    0% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(-30deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    70% {
-        transform: rotate(30deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*NAVBAR END*/
 
 /*FORM*/
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 3rem;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
 }
-.form-group{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width:100%;
-    height: 100%;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
 }
-.form-label{
-    font-size: 1.8rem;
-    font-weight: 600;
-    padding: 0.5rem;
+.form-label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.5rem;
 }
 
-.form-input-group{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width:100%;
-    height: 100%;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+.form-input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
 }
 .form-sub-label,
-.form-text-input{
-    width: 30%;
-    max-width: 100%;
-    padding: 0.8rem;
-    margin-right: 3rem;
-    font-size: 0.9rem;
-    border-top:none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 0.2px solid var(--graybg);
-    font-family: 'Victor Mono', monospace;
-    font-weight: 600;
+.form-text-input {
+  width: 30%;
+  max-width: 100%;
+  padding: 0.8rem;
+  margin-right: 3rem;
+  font-size: 0.9rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.2px solid var(--graybg);
+  font-family: "Victor Mono", monospace;
+  font-weight: 600;
 }
-input[type=text]:focus{
-    outline: none;
-    border-bottom: 0.2px solid blue;
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 0.2px solid blue;
 }
-.form-label.check{
-    font-size: 0.9rem;
-    font-family: 'Victor Mono', monospace;
-    font-weight: 600;
-    margin-bottom: 0;
-    padding:1rem;
+.form-label.check {
+  font-size: 0.9rem;
+  font-family: "Victor Mono", monospace;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 1rem;
 }
-.form-sub-label{
-    width:90%;
-    color: var(--blackbg);
-    font-size: 1rem;
+.form-sub-label {
+  width: 90%;
+  color: var(--blackbg);
+  font-size: 1rem;
 }
 .skills-section {
   display: flex;
@@ -167,7 +167,7 @@ input[type=text]:focus{
 }
 
 .check-outer {
-    width: 90%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -186,220 +186,371 @@ input[type=text]:focus{
   padding: 1rem;
 }
 
+.form-control.subtitle {
+  width: 100%;
+}
+.check-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
 
-.form-control.subtitle{
-    width: 100%;
+.check-group .left {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.check-group{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1rem;
+.check-group .right {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-
-.check-group .left{
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.check-group .right .install-guide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.check-group .right{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.check-group .right .install-guide .install-guide .form-checkbox {
+  width: 100%;
 }
-.check-group .right .install-guide{
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.check-group .right .install-guide .install-guide .form-checkbox{
-    width:100%;
-}
-.form-checkbox-input{
+.form-checkbox-input {
   width: 90%;
   padding: 1rem;
-  border:none;
+  border: none;
   border-bottom: 0.2px solid var(--graybg);
   cursor: pointer;
-  font-family: 'Victor Mono', monospace;
-font-weight: 600;
-display: flex;
-
+  font-family: "Victor Mono", monospace;
+  font-weight: 600;
+  display: flex;
 }
 .addbtn,
-.btn{
-    width:fit-content;
-    height: 100%;
-    padding: 0.5rem;
-    margin-top: 2rem;
-    border: none;
-    border:1px solid  var(--blackbg);
-    color: var(--blackbg);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: 'Victor Mono', monospace;
-    transition: all 0.3s ease-in-out;
+.btn {
+  width: fit-content;
+  height: 100%;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border: 2px solid var(--graybg);
+  color: var(--blackbg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Victor Mono", monospace;
+  transition: all 0.3s ease-in-out;
 }
-.btn:hover{
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+.btn:hover {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
-.btn:focus{
-    outline: none;
+.btn:focus {
+  outline: none;
 }
-.btn:active{
-    transform: scale(0.9);
+.btn:active {
+  transform: scale(0.9);
 }
-.removeBtn{
-    width:fit-content;
-    height: 100%;
-    padding: 0.5rem;
-    margin-top: 2rem;
-    border: none;
-    border:1px solid  var(--blackbg);
-    color: var(--blackbg);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: 'Victor Mono', monospace;
-    transition: all 0.3s ease-in-out;
+.removeBtn {
+  width: fit-content;
+  height: 100%;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border: none;
+  border: 1px solid var(--blackbg);
+  color: var(--blackbg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Victor Mono", monospace;
+  transition: all 0.3s ease-in-out;
 }
 
 /*FORM END*/
 /*MARKDOWN*/
-.markdown-container{
+.markdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+.options .btn {
+  font-family: "Victor Mono", monospace;
+  font-size: 0.9rem;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.options .icon {
+  animation: none;
+  font-size: 1rem;
+  padding: 2px;
+}
+.markdown-preview,
+.markdown-view {
+  width: 90%;
+  height: 90%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid var(--graybg);
+  background-color: #f5f5f5;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+}
+.markdown-preview {
+  display: none;
+}
+textarea {
+  width: 95%;
+  height: inherit;
+  min-height: 50vh;
+  border: none;
+  font-family: "Victor Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  outline: none;
+  background-color: transparent;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2rem;
+}
+.preview {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0px 0px 2px 0px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.content {
+  width: 100%;
+  font-family: "Victor Mono", monospace;
+  font-size: 0.7rem;
+  padding: 1rem;
+  text-align: left;
+}
+/*HIDE TEXT AREA SCRLOL*/
+textarea::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+/*MARKDOWN END*/
+
+/*COFFEE*/
+.coffee-holder {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: #e0fb4a;
+  margin-bottom: 0;
+  margin-right: 0;
+  position: fixed;
+  z-index: 100;
+}
+.coffee-icon {
+  color: var(--blackbg);
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: lighter;
+  padding: 2px;
+}
+/*COFFEE END*/
+
+/*alert*/
+.custom-alert-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-alert {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert p {
+  margin: 0 0 10px;
+}
+
+.custom-alert button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-alert button:hover {
+  background-color: #0056b3;
+}
+
+/*alert end*/
+/*FOOTER*/
+.footer {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+/*FOOTER END*/
+/*ABOUT*/
+.about{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
 }
-.options{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width:90%;
-    height: 90%;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
+header{
+    font-size: 2rem;
 }
-.markdown-view{
-    width: 90%;
-    height: 90%;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border: 1px solid var(--graybg);
-    background-color: rgba(0, 0, 0,0.1);
-    box-shadow: 0px 0px 2px 0px 10px rgba(0, 0, 0,0.5);
+section{
+    padding: 1rem;
+    font-family: "Victor Mono", monospace;
+    font-size: 0.9rem;
+    padding: 1rem;
 }
 
-/*MARKDOWN END*/
-/*COFFEE*/
-.coffee-holder{
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:1rem;
-    border-radius: 100%;
-    background-color: #E0FB4A;
-    margin-bottom: 0;
-    margin-right: 0;
-    position: fixed;
-    z-index: 100;
-}
-.coffee-icon{
-    color: var(--blackbg);
-    font-size: 3rem;
-    cursor: pointer;
-    font-weight: lighter;
-    padding: 2px;
-}
-/*COFFEE END*/
+/*ABOUT*/
+
+
 /*make responsive*/
-@media screen and (max-width: 900px){
-    .nav-links{
-        display: none;
-    }
-    .logo{
-        margin-left: 1rem;
-    }
-    .icon{
-        margin-right: 1rem;
-    }
-    .form-input-group{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .form-sub-label,
-    .form-text-input{
-        width: 100%;
-        margin-right: 0;
-    }
-    .form-label.check{
-        font-size: 1rem;
-    }
-    .check-outer{
-        width: 100%;
-    }
-    .checkbox-inner{
-        width: 100%;
-        height: 100%;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .check-group{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .check-group .left{
-        width: 100%;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .check-group .right{
-        width: 100%;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .check-group .right .install-guide{
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .check-group .right .install-guide .install-guide .form-checkbox{
-        width:100%;
-    }
-    .form-checkbox-input{
-        width: 100%;
-    }
-    .btn{
-        margin-left: 0;
-    }
-    .options{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0;
-    }
+@media screen and (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .logo {
+    margin-left: 1rem;
+  }
+  .icon {
+    margin-right: 1rem;
+  }
+  .form-input-group {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .form-sub-label,
+  .form-text-input {
+    width: 100%;
+    margin-right: 0;
+  }
+  .form-label.check {
+    font-size: 1rem;
+  }
+  .check-outer {
+    width: 100%;
+  }
+  .checkbox-inner {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .check-group {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .check-group .left {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .check-group .right {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .check-group .right .install-guide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .check-group .right .install-guide .install-guide .form-checkbox {
+    width: 100%;
+  }
+  .form-checkbox-input {
+    width: 100%;
+  }
+  .btn {
+    margin-left: 0;
+  }
+  .options {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+  }
 }

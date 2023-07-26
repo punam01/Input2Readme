@@ -1,9 +1,16 @@
+import React, { Suspense } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import UserForm from './components/UserForm';
+import Footer from './components/Footer';
 import './styles/style.css';
-import Markdown from './components/Markdown';
+import About from './components/About';
+import Use from './components/Use';
+
+
+const Markdown = React.lazy(() => import('./components/Markdown'));
+//import Markdown from './components/Markdown';
 function App() {
   return (
     <>
@@ -11,9 +18,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<UserForm/>} />
-        <Route path="/markdown" element={<Markdown/>} />
-        {/* Add more routes for your other components */}
+        <Route path="/markdown" element={<Suspense fallback={<p>This is loading................</p>}><Markdown/></Suspense>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/use" element={<Use/>} />
       </Routes>
+      <Footer/>
     </Router>
     </>
   );

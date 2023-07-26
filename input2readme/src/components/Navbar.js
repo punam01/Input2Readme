@@ -61,6 +61,9 @@ const Navbar = () => {
     const handleClick = () => {
         navigate('/');
     };
+    const handleUse = () => {
+        navigate('/use');
+    };
     return (    
         <>
         <nav>
@@ -71,6 +74,9 @@ const Navbar = () => {
                 <p align="center"> 
                     <img src="https://komarev.com/ghpvc/?username=punam01&label=Profile%20views&color=0e75b6&style=flat" alt="punam01" className='prof'/> 
                 </p>
+                <li onClick={handleUse}>
+                    <p>How to Use?</p>
+                </li>
                 <li onClick={handleBlogClick}>
                     <AiOutlineRead className="icon"/>
                     <p>Read Blog</p>

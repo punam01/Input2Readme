@@ -82,11 +82,10 @@ const UserForm = () => {
     };
     console.log(data);
     //Passing data to markdown.js
-    navigate("/markdown", { state: data });
-    //add data to local storage
-    localStorage.setItem("data", JSON.stringify(data));
-    
+    navigate("/markdown", { state: data });    
   };
+
+  
   return (
     <>
       <form onSubmit={onSubmit}>
