@@ -1,6 +1,6 @@
 const Alert = ({ message, onClose }) => {
   // Split the message into an array of lines based on the newline character (\n)
-  const messageLines = message.split('\n');
+  const messageLines = message.split("\n");
 
   return (
     <div className="custom-alert-container">

@@ -218,7 +218,6 @@ const UserForm = () => {
             />
           </div>
         </div>
-        {/*TABLE OF CONTENT*/}
         {Object.keys(checkboxData).map((key) => (
           <div className="form-group" key={key}>
             <label htmlFor={key} className="form-label">

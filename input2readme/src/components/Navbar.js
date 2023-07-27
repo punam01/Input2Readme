@@ -41,7 +41,9 @@ const Navbar = () => {
       }
     } catch (error) {
       console.error("Error while forking the repository:", error);
-      setAlertMessage("Error while forking the repository. Please try again later.");
+      setAlertMessage(
+        "Error while forking the repository. Please try again later."
+      );
     }
     setShowAlert(true);
   };
@@ -63,7 +65,7 @@ const Navbar = () => {
           `https://api.github.com/repos/${owner}/${repo}`
         );
         setStarCount(starsResponse.data.stargazers_count);
-          setAlertMessage("Repository forked successfully!🎉");
+        setAlertMessage("Repository forked successfully!🎉");
         // Perform any additional actions or show a success message if needed.
       } else {
         console.error("Unable to star the repository.");
@@ -71,7 +73,9 @@ const Navbar = () => {
       }
     } catch (error) {
       console.error("Error while starring the repository:", error);
-      setAlertMessage("Error while starring the repository. Please try again later.");
+      setAlertMessage(
+        "Error while starring the repository. Please try again later."
+      );
       setShowAlert(true);
     }
   };
@@ -113,20 +117,17 @@ const Navbar = () => {
             <AiOutlineStar className="icon" />
             <p>Star this repository {starCount !== null && { starCount }}</p>
           </li>
-          <li onClick={async () => {
-            await handleForkClick(); // Show the alert after forking the repository
-          }}>
+          <li
+            onClick={async () => {
+              await handleForkClick(); // Show the alert after forking the repository
+            }}
+          >
             <AiOutlineFork className="icon" />
             <p>Fork this repository {forkCount !== null && { forkCount }}</p>
           </li>
         </ul>
       </nav>
-      {showAlert && (
-        <Alert
-          message={alertMessage}
-          onClose={handleAlertClose}
-        />
-      )}
+      {showAlert && <Alert message={alertMessage} onClose={handleAlertClose} />}
     </>
   );
 };

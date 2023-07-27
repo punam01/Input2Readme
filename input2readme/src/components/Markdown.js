@@ -78,13 +78,13 @@ ${contribute.guide}
 ${license.guide}
 `;
 
-useEffect(() => {
+  useEffect(() => {
     const cleanedText = markdownContent.replace(/^\s+/g, "");
     setMarkDown(cleanedText);
   }, [markdownContent]);
 
   const handleBackToEdit = () => {
-    navigate("/", { state: memoizedLocation.state }); 
+    navigate("/", { state: memoizedLocation.state });
   };
 
   const handleCopyToClipboard = () => {
@@ -109,15 +109,18 @@ useEffect(() => {
     <>
       <div className="markdown-container">
         {showIns && (
-            <Alert message={`
+          <Alert
+            message={`
             Instructions:
             1. Click on "Copy to Clipboard📋" button to copy the markdown content.
             2. Click on "Download📥" button to download the markdown file.
             3. Click on "Preview👀" button to see the preview of the markdown content.
             4. Click on "Back to Edit✍️" button to edit the markdown content.
             5. Edit the markdown content in the editor on the left.
-            `} onClose={handleCloseAlert} />
-          )}
+            `}
+            onClose={handleCloseAlert}
+          />
+        )}
         <div className="options">
           <button className="btn" onClick={handleBackToEdit}>
             <FaArrowLeft className="icon" />

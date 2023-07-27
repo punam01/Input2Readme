@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 const About = () => {
-    const navigate = useNavigate ();
-    const handleClick = () => {
-        navigate("/");
-    };
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/");
+  };
 
   return (
     <>
