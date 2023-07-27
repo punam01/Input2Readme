@@ -5,7 +5,6 @@ const About = () => {
   const handleClick = () => {
     navigate("/");
   };
-
   return (
     <>
       <div className="about">
