@@ -2,6 +2,13 @@
 
 > *Simplify Readme Creation with Input2Readme*
 
+## Video
+
+
+https://github.com/punam01/Input2Readme/assets/43836363/114c72fd-2159-4f91-a323-6c67cbf3c2d4
+
+
+
 Table of Contents
 1. [Description](#description)
 2. [Features](#features)
