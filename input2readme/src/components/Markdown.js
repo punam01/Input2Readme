@@ -9,20 +9,20 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import Alert from "./Alert";
-
 const Markdown = () => {
   const location = useLocation();
   const [markDown, setMarkDown] = useState("");
   const navigate = useNavigate();
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-
+  const [showIns, setShowIns] = useState(true);
   const handleShowAlert = () => {
     setShowAlert(true);
   };
 
   const handleCloseAlert = () => {
     setShowAlert(false);
+    setShowIns(false);
   };
   const memoizedLocation = useMemo(() => location, [location]);
   const {
@@ -49,6 +49,7 @@ const Markdown = () => {
 
   const markdownContent = `
 # **${projectName}**
+
 > *${subTitle}*
 
 ${tableOfContents}
@@ -77,14 +78,13 @@ ${contribute.guide}
 ${license.guide}
 `;
 
-  useEffect(() => {
-    // Remove newlines and extra spaces before the text starts
+useEffect(() => {
     const cleanedText = markdownContent.replace(/^\s+/g, "");
     setMarkDown(cleanedText);
   }, [markdownContent]);
 
   const handleBackToEdit = () => {
-    navigate("/");
+    navigate("/", { state: memoizedLocation.state }); 
   };
 
   const handleCopyToClipboard = () => {
@@ -108,6 +108,16 @@ ${license.guide}
   return (
     <>
       <div className="markdown-container">
+        {showIns && (
+            <Alert message={`
+            Instructions:
+            1. Click on "Copy to Clipboard📋" button to copy the markdown content.
+            2. Click on "Download📥" button to download the markdown file.
+            3. Click on "Preview👀" button to see the preview of the markdown content.
+            4. Click on "Back to Edit✍️" button to edit the markdown content.
+            5. Edit the markdown content in the editor on the left.
+            `} onClose={handleCloseAlert} />
+          )}
         <div className="options">
           <button className="btn" onClick={handleBackToEdit}>
             <FaArrowLeft className="icon" />

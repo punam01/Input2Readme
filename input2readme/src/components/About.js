@@ -46,7 +46,7 @@ const About = () => {
             community thrive!
           </p>
           <br />
-          <button onClick={handleClick} class="btn">
+          <button onClick={handleClick} className="btn">
             Get Started Now
           </button>
         </section>

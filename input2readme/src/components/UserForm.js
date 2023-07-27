@@ -1,10 +1,22 @@
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const UserForm = () => {
   const [projectName, setProjectName] = useState("");
   const [subTitle, setSubTitle] = useState("");
   const [description, setDescription] = useState("");
+  const location = useLocation();
+  // eslint-disable-next-line
+  const [emoji, setEmoji] = useState({
+    installation: "📥",
+    usage: "📖",
+    features: "🎨",
+    techUsed: "👩‍💻",
+    gettingStarted: "🚀",
+    contribute: "🤝",
+    license: "📝",
+  });
+
   const [checkboxData, setCheckboxData] = useState({
     installation: {
       checked: false,
@@ -35,7 +47,7 @@ const UserForm = () => {
       guide: "",
     },
   });
-  // Handle input changes for projectName, subTitle, and description
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name === "title") {
@@ -71,7 +83,7 @@ const UserForm = () => {
     }));
   };
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const onSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -82,10 +94,68 @@ const UserForm = () => {
     };
     console.log(data);
     //Passing data to markdown.js
-    navigate("/markdown", { state: data });    
+    navigate("/markdown", { state: data });
   };
 
-  
+  const [initialDataLoaded, setInitialDataLoaded] = useState(false);
+
+  useEffect(() => {
+    // Check if location state has data and if the initial data is not loaded
+    if (location.state && !initialDataLoaded) {
+      const {
+        projectName,
+        subTitle,
+        description,
+        installation,
+        usage,
+        features,
+        techUsed,
+        gettingStarted,
+        contribute,
+        license,
+      } = location.state;
+
+      // Set the input fields based on the data from location state
+      setProjectName(projectName);
+      setSubTitle(subTitle);
+      setDescription(description);
+
+      setCheckboxData({
+        installation: {
+          checked: installation.checked,
+          guide: installation.guide,
+        },
+        usage: {
+          checked: usage.checked,
+          guide: usage.guide,
+        },
+        features: {
+          checked: features.checked,
+          guide: features.guide,
+        },
+        techUsed: {
+          checked: techUsed.checked,
+          guide: techUsed.guide,
+        },
+        gettingStarted: {
+          checked: gettingStarted.checked,
+          guide: gettingStarted.guide,
+        },
+        contribute: {
+          checked: contribute.checked,
+          guide: contribute.guide,
+        },
+        license: {
+          checked: license.checked,
+          guide: license.guide,
+        },
+      });
+
+      // Set the initialDataLoaded to true to prevent re-setting the data
+      setInitialDataLoaded(true);
+    }
+  }, [location.state, initialDataLoaded]);
+
   return (
     <>
       <form onSubmit={onSubmit}>
@@ -107,6 +177,7 @@ const UserForm = () => {
               className="form-text-input"
               id="title"
               name="title"
+              defaultValue={projectName}
               placeholder="EX. Awesome Blogging Platform"
               onChange={handleInputChange}
               required
@@ -123,6 +194,7 @@ const UserForm = () => {
               className="form-text-input subtitle"
               id="subtitle "
               name="subtitle"
+              defaultValue={subTitle}
               placeholder="EX. Empower Your Voice, Share Your Stories."
               onChange={handleInputChange}
               required
@@ -139,6 +211,7 @@ const UserForm = () => {
               className="form-text-input subtitle"
               id="description"
               name="description"
+              defaultValue={description}
               placeholder="EX. A short description of your project."
               onChange={handleInputChange}
               required
@@ -149,7 +222,7 @@ const UserForm = () => {
         {Object.keys(checkboxData).map((key) => (
           <div className="form-group" key={key}>
             <label htmlFor={key} className="form-label">
-              {key.charAt(0).toUpperCase() + key.slice(1)}
+              {key.charAt(0).toUpperCase() + key.slice(1) + emoji[key]}
             </label>
             <div className="check-group">
               <div className="left">
@@ -168,9 +241,7 @@ const UserForm = () => {
               </div>
               <div className={`right ${key}`}>
                 <div className="install-guide">
-                  <p>
-                    {key.charAt(0).toUpperCase() + key.slice(1)} Guide
-                  </p>
+                  <p>{key.charAt(0).toUpperCase() + key.slice(1)} Guide</p>
                   <input
                     type="text"
                     className="form-checkbox-input"
