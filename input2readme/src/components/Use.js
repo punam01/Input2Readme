@@ -1,5 +1,5 @@
 import React from "react";
-//import videoFile from '';
+import video from "../video/input2readme.mp4";
 const Use = () => {
   return (
     <div className="use">
@@ -67,7 +67,7 @@ const Use = () => {
         <div className="video-container">
           <h2>Video Example</h2>
           <video width="640" height="360" controls>
-            <source type="video/mp4" />
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
