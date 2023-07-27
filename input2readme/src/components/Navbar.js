@@ -7,7 +7,6 @@ import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const [starCount, setStarCount] = useState(null);
   const [forkCount, setForkCount] = useState(null);
-  const accessToken = "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";
   const owner = "punam01"; // Replace with the repository owner's username
   const repo = "Input2Readme"; // Replace with the repository name
   const navigate = useNavigate();
@@ -26,7 +25,7 @@ const Navbar = () => {
         {},
         {
           headers: {
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
           },
         }
       );
@@ -56,7 +55,7 @@ const Navbar = () => {
         {},
         {
           headers: {
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
           },
         }
       );
