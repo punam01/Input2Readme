@@ -25,15 +25,21 @@ const Contributors = () => {
         <header className="form-label">
           <h1>Project Contributors</h1>
         </header>
-        <ul>
+        <ul className="contributors-list">
           {contributors.map((contributor) => (
-            <li key={contributor.id}>
+            <li key={contributor.id} className="contributor-item">
               <a
                 href={contributor.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="contributor-link"
               >
-                {contributor.login}
+                <img
+                  src={contributor.avatar_url}
+                  alt={contributor.login}
+                  className="contributor-image"
+                />
+                <p className="contributor-name">{contributor.login}</p>
               </a>
             </li>
           ))}

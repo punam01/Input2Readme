@@ -3,6 +3,7 @@ import axios from "axios";
 import Alert from "./Alert";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineStar, AiOutlineFork, AiOutlineRead } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const [starCount, setStarCount] = useState(null);
   const [forkCount, setForkCount] = useState(null);
@@ -16,6 +17,7 @@ const Navbar = () => {
 
   const handleAlertClose = () => {
     setShowAlert(false);
+    setAlertMessage("");
   };
   const handleForkClick = async () => {
     try {
@@ -65,7 +67,7 @@ const Navbar = () => {
           `https://api.github.com/repos/${owner}/${repo}`
         );
         setStarCount(starsResponse.data.stargazers_count);
-        setAlertMessage("Repository forked successfully!🎉");
+        setAlertMessage("Repository stared successfully!🎉");
         // Perform any additional actions or show a success message if needed.
       } else {
         console.error("Unable to star the repository.");
@@ -113,7 +115,7 @@ const Navbar = () => {
             <p>Read Blog</p>
           </li>
           <li onClick={handleContributorsClick}>
-            <AiOutlineRead className="icon" />
+            <FaGithub className="icon" />
             <p>Check our Contributors</p>
           </li>
           <li

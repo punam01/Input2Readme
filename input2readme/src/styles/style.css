@@ -489,7 +489,7 @@ a{
   color: var(--blackbg);
 }
 li{
-  list-style:circle;
+  list-style:none;
 }
 li:hover{
   background-color:var(--yellowbg);
@@ -497,6 +497,36 @@ li:hover{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+/* CSS Code */
+.contributors-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contributor-item {
+  text-align: center;
+}
+
+.contributor-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.contributor-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  overflow: hidden;
+}
+
+.contributor-name {
+  margin-top: 10px;
+}
+
 /*make responsive*/
 @media screen and (max-width: 900px) {
   .nav-links {

@@ -8,8 +8,8 @@ const Use = () => {
       </header>
       <section>
         <p>
-          Creating a project README is an essential part of any software
-          development project. A README provides crucial information about your
+          Creating a project README is an <b>essential part</b> of any <b>software
+          development project.</b> A README provides crucial information about your
           project, making it easier for others to understand and use your code.{" "}
         </p>
         <br />
