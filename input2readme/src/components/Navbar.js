@@ -88,6 +88,9 @@ const Navbar = () => {
   const handleUse = () => {
     navigate("/use");
   };
+  const handleContributorsClick = () => {
+    navigate("/contributors");
+  };
   return (
     <>
       <nav>
@@ -108,6 +111,10 @@ const Navbar = () => {
           <li onClick={handleBlogClick}>
             <AiOutlineRead className="icon" />
             <p>Read Blog</p>
+          </li>
+          <li onClick={handleContributorsClick}>
+            <AiOutlineRead className="icon" />
+            <p>Check our Contributors</p>
           </li>
           <li
             onClick={async () => {

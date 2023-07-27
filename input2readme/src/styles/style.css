@@ -483,7 +483,20 @@ section {
 }
 
 /*ABOUT*/
-
+/*contributors*/
+a{
+  text-decoration: none;
+  color: var(--blackbg);
+}
+li{
+  list-style:circle;
+}
+li:hover{
+  background-color:var(--yellowbg);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 /*make responsive*/
 @media screen and (max-width: 900px) {
   .nav-links {
@@ -556,7 +569,6 @@ section {
   }
   .use,
   .about {
-    /*make responsive*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

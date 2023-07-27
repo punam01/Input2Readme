@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './styles/style.css';
 import About from './components/About';
 import Use from './components/Use';
-
+import Contributors from './components/Contributors';
 
 const Markdown = React.lazy(() => import('./components/Markdown'));
 //import Markdown from './components/Markdown';
@@ -21,6 +21,7 @@ function App() {
         <Route path="/markdown" element={<Suspense fallback={<p>This is loading................</p>}><Markdown/></Suspense>} />
         <Route path="/about" element={<About/>} />
         <Route path="/use" element={<Use/>} />
+        <Route path="/contributors" element={<Contributors/>} />
       </Routes>
       <Footer/>
     </Router>
