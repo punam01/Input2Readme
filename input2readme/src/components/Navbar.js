@@ -96,7 +96,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <p className="logo" onClick={handleClick}>
+        <p className="logo" title="Home" onClick={handleClick}>
           Input2Readme
         </p>
         <ul className="nav-links">

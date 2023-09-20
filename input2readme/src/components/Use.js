@@ -57,7 +57,7 @@ const Use = () => {
           </li>
         </ol>
         <br />
-        <p style={{ backgroundColor: "#e0fb4a" }}>
+        <p>
           By following these steps, you can create a comprehensive and
           informative README that will help others understand and use your
           project effectively. A well-written README not only showcases your
