@@ -167,8 +167,8 @@ const UserForm = () => {
             <input
               type="text"
               className="form-text-input"
-              id="title"
-              name="title"
+              id="dtitle"
+              name="dtitle"
               defaultValue="Welcome to 🙋"
               readOnly
             />
@@ -178,7 +178,7 @@ const UserForm = () => {
               id="title"
               name="title"
               defaultValue={projectName}
-              placeholder="EX. Awesome Blogging Platform"
+              placeholder="Eg. Awesome Blogging Platform"
               onChange={handleInputChange}
               required
             />
@@ -195,7 +195,7 @@ const UserForm = () => {
               id="subtitle "
               name="subtitle"
               defaultValue={subTitle}
-              placeholder="EX. Empower Your Voice, Share Your Stories."
+              placeholder="Eg. Empower Your Voice, Share Your Stories."
               onChange={handleInputChange}
               required
             />
@@ -212,7 +212,7 @@ const UserForm = () => {
               id="description"
               name="description"
               defaultValue={description}
-              placeholder="EX. A short description of your project."
+              placeholder="Eg. A short description of your project."
               onChange={handleInputChange}
               required
             />
@@ -246,7 +246,7 @@ const UserForm = () => {
                     className="form-checkbox-input"
                     id={`${key}-guide`} // Update the id to include key
                     name={`${key}-guide`} // Update the name to include key
-                    placeholder={`EX. Information about ${key}`}
+                    placeholder={`Eg. Information about ${key}`}
                     onChange={(e) => handleGuideChange(e, key)} // Pass the key to the handler
                     value={checkboxData[key].guide}
                   />
@@ -256,7 +256,7 @@ const UserForm = () => {
           </div>
         ))}
         <button type="submit" className="btn btn-primary">
-          Submit
+          Generate README
         </button>
       </form>
     </>

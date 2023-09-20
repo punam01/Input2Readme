@@ -30,6 +30,7 @@ nav {
   font-family: "Mulish", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
+  cursor: pointer;
 }
 .nav-links {
   display: flex;
@@ -105,6 +106,21 @@ form {
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0.5rem;
+}
+
+.form-label h1{
+  position: relative;
+}
+
+.form-label h1::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 20px;
+  transform: translateX(-100%);
+  background-color: #e0fb4a;
 }
 
 .form-input-group {
@@ -405,6 +421,14 @@ textarea::-webkit-scrollbar {
   justify-content: flex-start;
   align-items: flex-start;
 }
+li{
+  padding: 2px 20px 20px 20px;
+}
+
+.use section p:last-of-type{
+  background-color: #e0fb4a;
+  padding: 8px 12px;
+}
 li:hover {
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -538,6 +562,10 @@ li:hover{
   .icon {
     margin-right: 1rem;
   }
+  form{
+    padding: 1rem;
+    overflow: hidden;
+  }
   .form-input-group {
     flex-direction: column;
     justify-content: flex-start;
@@ -545,7 +573,7 @@ li:hover{
   }
   .form-sub-label,
   .form-text-input {
-    width: 100%;
+    width: 80%;
     margin-right: 0;
   }
   .form-label.check {
@@ -586,7 +614,7 @@ li:hover{
     width: 100%;
   }
   .form-checkbox-input {
-    width: 100%;
+    width: 80%;
   }
   .btn {
     margin-left: 0;
